@@ -10,4 +10,8 @@
 
 @interface test1pgm1ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *myLabel;
+- (IBAction)swap:(id)sender;
+
+
 @end

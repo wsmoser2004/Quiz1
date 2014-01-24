@@ -17,7 +17,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    [self.myLabel setTextColor:[UIColor greenColor]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -26,4 +26,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)swap:(id)sender
+{
+    
+    // color == 0 means red, color == 1 means green. Initially green.
+    static int color = 1;
+    
+    if (color == 0)
+    {
+        // Color is red, so set to green
+        [self.myLabel setTextColor:[UIColor greenColor]];
+        color = 1;
+    }
+    else
+    {
+        [self.myLabel setTextColor:[UIColor redColor]];
+        color = 0;
+    }
+}
 @end
